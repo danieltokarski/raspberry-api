@@ -17,7 +17,7 @@ Its main objective is to **identify and expose the producers who have received t
 
 ---
 
-## 🔧 Requisitos
+## 🔧 Requirements 
 
 Before running the project, make sure you have the following tools installed on your machine:
 
