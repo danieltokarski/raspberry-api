@@ -17,6 +17,31 @@ Its main objective is to **identify and expose the producers who have received t
 
 ---
 
+## 🔧 Requisitos
+
+Before running the project, make sure you have the following tools installed on your machine:
+
+### ✅ Environment
+
+- **Java JDK 21**  
+  Check the version with:
+  ```bash
+  java -version
+  ```
+  
+- **Maven 3.8+ (if you are not using the mvnw wrapper)**
+  Check the version with:
+  ```bash
+  mvn -v
+  ```
+- ** Git
+  To clone the repository:
+  ```bash
+  git --version
+  ```
+  
+---
+
 ## 🚀 How to run the project
 
 ### 1. Clone the repository
