@@ -11,9 +11,18 @@ import org.springframework.stereotype.Service;
 import com.outeseratest.raspberry.domain.model.Movie;
 import com.outeseratest.raspberry.domain.model.ProducerInterval;
 
+/**
+ * Service class responsible for calculating intervals between award wins for movie producers.
+ */
 @Service
 public class ProducerService {
-
+	
+	/**
+     * Calculates the intervals between wins for each producer based on a list of winning movies.
+     *
+     * @param vencedores a list of {@link Movie} instances that won awards
+     * @return a list of {@link ProducerInterval} objects representing the intervals for each producer
+     */
     public List<ProducerInterval> calculateIntervals(List<Movie> vencedores) {
         
     	Map<String, List<Integer>> premiosPorProdutor = agruparPremiosPorProdutor(vencedores);
