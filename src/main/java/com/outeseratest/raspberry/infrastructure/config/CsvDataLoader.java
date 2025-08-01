@@ -20,11 +20,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CsvDataLoader {
 
-	private final MovieSaveUseCase movieSaveUseCase;
-	private final CsvLoaderUtil csvLoaderUtil;
-	
-	 @Value("${app.csv.csv-path-movies-import}")
-	 private String csvFilePath;
+   private final MovieSaveUseCase movieSaveUseCase;
+   private final CsvLoaderUtil csvLoaderUtil;
+
+   @Value("${app.csv.csv-path-movies-import}")
+   private String csvFilePath;
 	 
     @Transactional
     @EventListener(ApplicationReadyEvent.class)
