@@ -42,6 +42,5 @@ public class CsvDataLoader {
 
         movieSaveUseCase.execute(movies);
         System.out.println("Importação do CSV concluída. Total: " + movies.size());
-	}
-	
+    }	
 }
