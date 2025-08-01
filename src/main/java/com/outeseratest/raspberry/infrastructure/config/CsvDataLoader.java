@@ -26,21 +26,20 @@ public class CsvDataLoader {
    @Value("${app.csv.csv-path-movies-import}")
    private String csvFilePath;
 	 
-    @Transactional
-    @EventListener(ApplicationReadyEvent.class)
-	public void loadCsvOnStartup() {
-		List<CSVRecord> records = csvLoaderUtil.loadCsv(csvFilePath);
-
-        List<Movie> movies = records.stream().map(record -> {
-        	Movie movie = new Movie();
-            movie.setYear(Integer.parseInt(record.get("year")));
-            movie.setTitle(record.get("title"));
-            movie.setProducers(ProducerParserUtil.parseProducers(record.get("producers")));
-            movie.setWinner("yes".equalsIgnoreCase(record.get("winner")));
-            return movie;
-        }).toList();
+   @Transactional
+   @EventListener(ApplicationReadyEvent.class)
+   public void loadCsvOnStartup() {
+       List<CSVRecord> records = csvLoaderUtil.loadCsv(csvFilePath);	
+       List<Movie> movies = records.stream().map(record -> {
+          Movie movie = new Movie();
+          movie.setYear(Integer.parseInt(record.get("year")));
+          movie.setTitle(record.get("title"));
+          movie.setProducers(ProducerParserUtil.parseProducers(record.get("producers")));
+          movie.setWinner("yes".equalsIgnoreCase(record.get("winner")));
+          return movie;
+       }).toList();
 
         movieSaveUseCase.execute(movies);
         System.out.println("Importação do CSV concluída. Total: " + movies.size());
-    }	
+   }	
 }
