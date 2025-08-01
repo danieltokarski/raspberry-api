@@ -13,9 +13,8 @@ import lombok.Setter;
 @Setter
 public class Movie {
 	
-	private String title;
+    private String title;
     private int year;
     private List<String> producers;
     private boolean winner;
-    
 }

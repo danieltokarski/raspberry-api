@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RaspberryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RaspberryApplication.class, args);
+        SpringApplication.run(RaspberryApplication.class, args);
 	}
 
 }

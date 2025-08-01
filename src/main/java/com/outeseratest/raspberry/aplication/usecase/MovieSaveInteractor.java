@@ -13,12 +13,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MovieSaveInteractor implements MovieSaveUseCase {
 
-	private final MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
 	
-	@Override
-	public void execute(List<Movie> movies) {
-		
-		movieRepository.saveMovies(movies);
-		
+    @Override
+    public void execute(List<Movie> movies) {
+        movieRepository.saveMovies(movies);
 	}
 }

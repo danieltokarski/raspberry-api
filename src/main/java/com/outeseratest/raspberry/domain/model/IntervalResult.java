@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 public class IntervalResult {
 	
-	private List<ProducerInterval> min;
+    private List<ProducerInterval> min;
     private List<ProducerInterval> max;
     
 }

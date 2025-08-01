@@ -17,26 +17,26 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MovieRepositoryImpl implements MovieRepository {
 	
-	 private final MovieJpaRepository jpaRepository;
+    private final MovieJpaRepository jpaRepository;
 
-	@Override
-	public List<Movie> findAllWinners() {
-		return jpaRepository.findByWinner(true)
-	            .stream()
-	            .map(MovieEntityFactory::toDomain)
-	            .collect(Collectors.toList());
+    @Override
+    public List<Movie> findAllWinners() {
+        return jpaRepository.findByWinner(true)
+                .stream()
+                .map(MovieEntityFactory::toDomain)
+                .collect(Collectors.toList());
 	}
 
 	@Override
 	@Transactional
 	public void saveMovies(List<Movie> movies) {
 		
-		List<MovieEntity> list = movies
-				.stream()
-				.map(MovieEntityFactory::toEntity)
-				.toList();
+        List<MovieEntity> list = movies
+            .stream()
+            .map(MovieEntityFactory::toEntity)
+            .toList();
 		
-		jpaRepository.saveAll(list);
+        jpaRepository.saveAll(list);
 	}
 	
 }
