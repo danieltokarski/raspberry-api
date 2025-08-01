@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CalculateIntervalsInteractor implements CalculateIntervalsUseCase {
 	
-	private final MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
     private final ProducerService producerService;
     
     public IntervalResult execute() {
